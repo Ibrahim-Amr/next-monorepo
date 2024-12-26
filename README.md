@@ -1,76 +1,68 @@
-# Turborepo starter
+# New Travolic Monorepo
 
-This is an official starter Turborepo.
+This is a monorepo built with Turborepo, Next.js 15, React 19, and TypeScript.
 
-## Using this example
+## Getting Started
 
-Run the following command:
+First, install dependencies:
 
 ```sh
-npx create-turbo@latest
+yarn install
+```
+
+Then, run the development server:
+
+```sh
+yarn dev
 ```
 
 ## What's inside?
 
-This Turborepo includes the following packages/apps:
+This monorepo includes the following packages/apps:
 
-### Apps and Packages
+### Apps
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `home`: A [Next.js](https://nextjs.org/) app running on Next.js 15 with Turbopack
+- `shell`: A [Next.js](https://nextjs.org/) app running on Next.js 15 with Turbopack
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### Packages
 
-### Utilities
+- `@repo/ui`: A shared React component library
+- `@repo/eslint-config`: Shared ESLint configurations
+- `@repo/typescript-config`: Shared TypeScript configurations
+- `@repo/tailwind-config`: Shared Tailwind CSS configuration
 
-This Turborepo has some additional tools already setup for you:
+### Tech Stack
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- [Next.js 15](https://nextjs.org/) with Turbopack
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io)
 
-### Build
+### Available Scripts
 
-To build all apps and packages, run the following command:
+From the root directory:
 
-```
-cd my-turborepo
-pnpm build
-```
+```bash
+# Start development servers
+yarn dev
 
-### Develop
+# Build all apps and packages
+yarn build
 
-To develop all apps and packages, run the following command:
+# Lint all apps and packages
+yarn lint
 
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+# Format code with Prettier
+yarn format
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### Requirements
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
+- Node.js >= 18
+- Yarn 1.22.22
 
 ## Useful Links
 
